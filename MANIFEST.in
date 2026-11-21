@@ -1,0 +1,7 @@
+include README.md LICENSE CHANGELOG.md
+recursive-include config *.json *.yaml *.yml
+recursive-include prompts *.md
+recursive-include examples *.py
+recursive-include docs *.md
+recursive-include deploy *
+recursive-include ts-sdk *

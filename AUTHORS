@@ -1,0 +1,6 @@
+# Authors
+
+loopinfer contributors — a zero-dependency educational/engineering reference
+implementation of the looped-transformer (looped MoE) inference runtime.
+
+思路参考 Thinking Machines Lab Inkling 2 Mini 的公开论文 / 技术说明，不含任何官方权重。

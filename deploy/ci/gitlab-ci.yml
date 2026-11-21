@@ -1,0 +1,9 @@
+stages:
+  - test
+
+test:
+  image: python:3.11-slim
+  stage: test
+  script:
+    - python -m loopinfer doctor
+    - python -m unittest discover -s tests -q

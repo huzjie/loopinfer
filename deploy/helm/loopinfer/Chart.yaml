@@ -1,0 +1,6 @@
+apiVersion: v2
+name: loopinfer
+description: Looped Transformer (Looped MoE) inference runtime
+type: application
+version: 1.0.0
+appVersion: "1.0.0"

@@ -1,0 +1,27 @@
+{
+  "model": {
+    "dim": 32,
+    "n_layers": 24,
+    "vocab_size": 256,
+    "n_heads": 4,
+    "head_dim": 8,
+    "hidden_ffn": 64,
+    "max_seq_len": 2048,
+    "loop_start": 6,
+    "loop_end": 18,
+    "loop_passes": 3,
+    "gate_init": 0.0,
+    "n_experts": 32,
+    "top_k": 8,
+    "load_bal_coef": 0.01,
+    "use_moe_loop": true,
+    "window_size": 512
+  },
+  "drafter": { "K": 4, "draft_speedup": 3.0, "enabled": true },
+  "quant": { "format": "mxfp8", "block_size": 16 },
+  "sampler": "greedy",
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 0.9,
+  "max_tokens": 64
+}

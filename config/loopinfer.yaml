@@ -1,0 +1,37 @@
+# LoopInfer 示例配置（填这份即可跑，不用动代码）
+# 注：此处为「参考规模」（CPU 毫秒级）；官方 Inkling 2 Mini 为 26.4B 总参 / 256 专家 / 1M 上下文，
+#     把 n_experts 改 256、dim 改 64 即可对齐官方量级，调度 / MoE / 解码逻辑不变。
+model:
+  dim: 32
+  n_layers: 24
+  vocab_size: 256
+  n_heads: 4
+  head_dim: 8
+  hidden_ffn: 64
+  max_seq_len: 2048
+  # 循环层：中间 12 层循环 3 次，等效深度 48
+  loop_start: 6
+  loop_end: 18
+  loop_passes: 3
+  gate_init: 0.0
+  # MoE：32 专家，每 token 激活 8（官方 256 专家 / top-8）
+  n_experts: 32
+  top_k: 8
+  load_bal_coef: 0.01
+  use_moe_loop: true
+  window_size: 512
+
+drafter:
+  K: 4
+  draft_speedup: 3.0
+  enabled: true
+
+quant:
+  format: mxfp8
+  block_size: 16
+
+sampler: greedy
+temperature: 1.0
+top_k: 50
+top_p: 0.9
+max_tokens: 64

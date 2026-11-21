@@ -1,0 +1,16 @@
+{
+  "name": "loopinfer-sdk",
+  "version": "1.0.0",
+  "description": "TypeScript SDK for the LoopInfer looped-transformer inference runtime",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["transformer", "recurrent", "moe", "inference", "llm"],
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

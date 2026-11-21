@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loopinfer"
+version = "1.0.0"
+description = "Looped Transformer (Looped MoE) inference runtime: recurrent-depth layers with cross-pass messaging, sparse MoE routing, speculative decoding and NVFP4/MXFP8 quantization."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "Apache-2.0" }
+authors = [{ name = "loopinfer contributors" }]
+keywords = ["transformer", "recurrent", "looped", "moe", "speculative-decoding", "quantization", "llm", "inference"]
+
+[project.urls]
+Homepage = "https://github.com/huzjie/loopinfer"
+
+[tool.setuptools.packages.find]
+include = ["loopinfer*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
